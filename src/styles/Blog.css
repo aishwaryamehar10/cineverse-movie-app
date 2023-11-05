@@ -1,0 +1,42 @@
+.blogpage {
+    background-color: black;
+    color: white;
+   
+  }
+  
+  .blog-container {
+    display: flex;
+    flex-wrap: wrap;
+   
+  }
+  
+  .blog-card {
+    background-color: #333; 
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    width: 300px; 
+    border: 1px solid #444; 
+    border-radius: 5px;
+  }
+  
+  .blog-card h2 {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .blog-card p {
+    font-size: 16px;
+  }
+  
+  .blog-card a {
+    color: #007bff; 
+    text-decoration: none;
+  }
+  
+  .blog-card a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  

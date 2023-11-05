@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Hero from "./components/Hero";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./components/Login";
+import Home from "./components/Home";
+import { useSelector } from "react-redux";
+import About from "./components/About";
+import Blog from "./components/Blog";
+
 
 function App() {
+  const isAuthenticated = useSelector((state) => state.user.isAuthenticated);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Routes>
+        <Route path = "/" element = {<Hero />} />
+        <Route path = "/login" element = {<Login />} />
+        <Route path = '/home' element = {<Home /> }isAuthenticated={isAuthenticated} />
+        <Route path = '/about' element = {<About /> }isAuthenticated={isAuthenticated} />
+        <Route path = '/blog' element = {<Blog /> }isAuthenticated={isAuthenticated} />
+    </Routes>
+    </BrowserRouter>
   );
 }
 
