@@ -5,6 +5,7 @@
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
+  position: relative;
 }
 
 .movie-card:hover {
@@ -13,22 +14,58 @@
 
 .movie-poster {
   width: 100%;
-  height: auto;
+  height: 200px;
 }
 
 .movie-details {
-  padding: 12px;
+  padding : 20px;
+  margin-bottom: 10px;
 }
 
-.movie-title {
-  font-size: 1.2rem;
+.movie-details .movie-title {
+  font-size: 16px;
+  line-height: 1rem;
   margin: 0;
+  color : #777;
 }
 
-.movie-year {
-  font-size: 0.9rem;
+.movie-details .movie-year {
+  font-size: 14px;
+  line-height: 1rem;
   color: #777;
   margin: 6px 0;
+}
+
+.movie-card-icons {
+  color : white;
+  display: flex;
+  gap : 10px;
+  position: absolute;
+  margin-top: 10px;
+  bottom: 10px;
+  left : 10px;
+  right : 0;
+}
+
+.movie-card-icons .heart-icon {
+  width : 24px;
+  height : 24px;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+.movie-card-icons .bookmark-icon {
+  width : 24px;
+  height : 24px;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+.movie-card-icons .play-icon {
+  width : 24px;
+  height : 24px;
+  margin-right: 5px;
+  margin-top: 10px;
 }
 
   

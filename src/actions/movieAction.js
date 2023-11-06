@@ -4,7 +4,7 @@ export const fetchMovies = () => async (dispatch) => {
     dispatch(fetchMoviesStart());
     try {
         console.log('Fetching movies...');
-        const response = await fetch('https://www.omdbapi.com/?i=tt3896198&apikey=b132ee3f&s=car');
+        const response = await fetch('https://www.omdbapi.com/?i=tt3896198&apikey=b132ee3f&s=home');
         if(!response.ok){
             throw new Error(`HTTP ERROR! STATUS : ${response.status}`)
         }

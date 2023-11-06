@@ -29,7 +29,7 @@ function Home() {
             <li>Most Popular</li>
         </ul>
       </div>
-      {loading ? <p>Loading...</p> :
+      {loading ? <p className='loading'>Loading...</p> :
        <MovieList movies = {movies} />
       }
     </div>
