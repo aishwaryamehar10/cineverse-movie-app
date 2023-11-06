@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/BlogCard.css';
+import {Link} from 'react-router-dom';
 
 function BlogCard({ blog }) {
   return (
@@ -8,7 +9,7 @@ function BlogCard({ blog }) {
         <h2 className="blog-title">{blog.title}</h2>
        <p className="blog-body">{blog.body}</p>
         <div className="blog-link">
-           <a href = "/">Read More</a>
+          <Link to = "/">Read More</Link>
         </div>
       </div>
     </div>

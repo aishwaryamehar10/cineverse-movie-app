@@ -3,7 +3,7 @@ import Navbar from '../utils/Navbar';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMovies } from '../actions/movieAction';
 import MovieList from '../utils/MovieList';
-
+import '../styles/Home.css';
 
 function Home() {
     const dispatch = useDispatch();

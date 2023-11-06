@@ -1,11 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import MovieCard from "./MovieCard";
-//import '../styles/MovieList.css';
+import '../styles/MovieList.css';
 
 
 function MovieList() {
-    const movies = useSelector(state => state.movies)
+    const movies = useSelector(state => state.movies.movies)
     const loading = useSelector(state => state.movies.loading);
     const error = useSelector(state => state.movies.error);
 
