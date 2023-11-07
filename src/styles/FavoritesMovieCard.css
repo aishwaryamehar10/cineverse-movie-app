@@ -1,0 +1,54 @@
+.favorites-movie-card {
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  position: relative;
+}
+
+.favorites-movie-card:hover {
+  transform: translate(-5px);
+}
+
+.favorites-movie-poster {
+  width: 100%;
+  height: 200px;
+}
+
+.favorites-movie-details {
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.favorites-movie-details .favorites-movie-title {
+  font-size: 16px;
+  line-height: 1rem;
+  margin: 0;
+  color: #777;
+}
+
+.favorites-movie-details .favorites-movie-year {
+  font-size: 14px;
+  line-height: 1rem;
+  color: #777;
+  margin: 6px 0;
+}
+
+.favorites-movie-icons {
+  position: absolute;
+  margin-top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 0;
+  color: white;
+}
+
+.favorites-movie-icons .remove-icon {
+    width: 24px;
+    height : 24px;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-top: 10px;
+}

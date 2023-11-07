@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 function Login() {
 
     const [credentials, setCredentials] = useState({email : '', password : ''})
-    const isAunthenticated = useSelector(state => state.user.isAunthenticated);
+    const isAuthenticated = useSelector(state => state.user.isAuthenticated);
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -24,6 +24,8 @@ function Login() {
 
   return (
     <div className='login-page'>
+      <div className='login-box'>
+        <div className='login-input'>
        <input type = "Email"
        placeholder = "Email address"
         value={credentials.email}
@@ -34,10 +36,16 @@ function Login() {
        value={credentials.password}
        onChange={(e)=>setCredentials({...credentials,password : e.target.value})}
        />
-       <button onClick = {handleClick}>Login</button>
-       {isAunthenticated && <p>Successfully logged in!!</p>}
+       </div>
+       <button className='login-button' onClick = {handleClick}>Login</button>
+       {isAuthenticated ? (
+          <p className='success-message'>Successfully logged in!</p>
+        ) : (
+          <p className='failure-mssage'>Invalid Credentials</p>
+        )}
+       </div>
     </div>
   )
 }
 
-export default Login
+export default Login;

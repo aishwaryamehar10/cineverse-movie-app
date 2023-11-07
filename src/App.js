@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import { useSelector } from "react-redux";
 import About from "./components/About";
 import Blog from "./components/Blog";
+import Favorites from "./utils/Favorites";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path = '/home' element = {<Home /> }isAuthenticated={isAuthenticated} />
         <Route path = '/about' element = {<About /> }isAuthenticated={isAuthenticated} />
         <Route path = '/blog' element = {<Blog /> }isAuthenticated={isAuthenticated} />
+        <Route path = '/favorites' element = {<Favorites />} isAuthenticated = {isAuthenticated} />
     </Routes>
     </BrowserRouter>
   );

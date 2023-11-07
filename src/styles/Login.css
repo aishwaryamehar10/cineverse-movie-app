@@ -1,4 +1,53 @@
 .login-page {
     height: 100vh;
-    background: rgba(0,0,0,0.8);
+    background:rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background : rgba(0, 0, 0, 0.5);
+    width : 400px;
+    padding: 20px;
+    display: flex;
+    border : none;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.login-input {
+    margin: 10px;
+}
+
+.login-input input {
+    width : 100%;
+    padding: 10px;
+    border : 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    background: transparent;
+    margin: 5px 0;
+}
+
+.login-button {
+    width : 100%;
+    padding: 10px;
+    border : none;
+    background-color: gray;
+    color : white;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.login-button:hover {
+    background-color: darkgray;
+}
+
+.success-message {
+    color : white;
+    margin-top: 10px;
+    text-align: center;
 }

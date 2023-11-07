@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/MovieCard.css";
+import {useDispatch, useSelector} from 'react-redux';
+import { addToFavorite, removeFromFavorite } from "../reducers/favoriteSlice";
 
 function MovieCard({ movie }) {
+  const dispatch = useDispatch();
+  const favorites = useSelector(state => state.favorites.movies);
+
+  const [isFavorite, setIsFavorite] = useState(favorites.some(favorite => favorite.id === movie.id))
+
+  const toggleFavorite = () => {
+    if(isFavorite) {
+      dispatch(removeFromFavorite(movie));
+      console.log('Removed from favorites', movie);
+    }
+    else{
+      dispatch(addToFavorite(movie));
+      console.log('Added to favorites', movie);
+    }
+
+    // Update local isFavorite state
+    setIsFavorite(!isFavorite);
+  }
+
   return (
     <div className="movie-card">
       <img src={movie.Poster} alt={movie.Title} className="movie-poster" />
@@ -12,11 +33,13 @@ function MovieCard({ movie }) {
       <div className="movie-card-icons">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          fill="none"
+          fill={isFavorite ? 'red' : 'none'}
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="heart-icon">
+          className="heart-icon"
+          onClick={toggleFavorite}
+          >
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -27,12 +50,12 @@ function MovieCard({ movie }) {
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke="currentColor"
-          class="bookmark-icon">
+          className="bookmark-icon">
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"
           />
         </svg>
@@ -40,17 +63,17 @@ function MovieCard({ movie }) {
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke="currentColor"
-          class="play-icon">
+          className="play-icon">
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
           />
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z"
           />
         </svg>
