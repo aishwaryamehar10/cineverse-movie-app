@@ -1,51 +1,53 @@
-
 .homepage {
-    background-color: black;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-  }
-  
-  .home-container {
-    padding: 20px;
-    margin-top: 15px;
-    text-align: center;
-  }
-  
-  .home-container h2 {
-    font-size: 30px;
-    color: white;
-    margin-bottom: 20px;
-  }
-  
-  .home-container ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .home-container li {
-    margin: 0 10px;
-    font-size: 16px;
-    color: #555;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
-  
-  .home-container li:hover {
-    color: yellow;
-  }
-  
-  .loading {
-    font-size: 18px;
-    color: yellow;
-    margin: 20px;
-  }
-  
-  .movie-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-  }
-  
-  
+  background-color: black;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.dark-theme .homepage {
+  background-color: white;
+  color: black;
+}
+
+.home-container {
+  padding: 20px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.home-container h2 {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.home-container ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.home-container li {
+  margin: 0 10px;
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.home-container li:hover {
+  color: yellow;
+}
+
+.loading {
+  font-size: 18px;
+  color: yellow;
+  margin: 20px;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}

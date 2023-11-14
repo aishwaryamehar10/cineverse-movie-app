@@ -1,39 +1,42 @@
-import React, { useEffect } from 'react'
-import Navbar from '../utils/Navbar';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchMovies } from '../actions/movieAction';
-import MovieList from '../utils/MovieList';
-import '../styles/Home.css';
+import React, { useEffect } from "react";
+import Navbar from "../utils/Navbar";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchMovies } from "../actions/movieAction";
+import MovieList from "../utils/MovieList";
+import "../styles/Home.css";
 
 function Home() {
-    const dispatch = useDispatch();
-    const loading = useSelector(state=>state.movies.loading);
-    const movies = useSelector(state=>state.movies.movies);
+  const dispatch = useDispatch();
+  const loading = useSelector((state) => state.movies.loading);
+  const movies = useSelector((state) => state.movies.movies);
+  const isDarkTheme = useSelector((state) => state.theme.isDarkTheme);
 
-    useEffect(()=>{
-        dispatch(fetchMovies(''));
-    }, [dispatch]);
+  useEffect(() => {
+    dispatch(fetchMovies(""));
+  }, [dispatch]);
 
-    console.log(movies);
+  console.log(movies);
 
   return (
-    <div className='homepage'>
+    <div className={`homepage ${isDarkTheme ? "dark-theme" : ""}`}>
       <Navbar />
-      <div className='home-container'>
+      <div className="home-container">
         <h2>What To Watch - CineVerse</h2>
         <ul>
-            <li>Top Picks</li>
-            <li>Watch Guide</li>
-            <li>Fans Favourite</li>
-            <li>From Your WatchList</li>
-            <li>Most Popular</li>
+          <li>Top Picks</li>
+          <li>Watch Guide</li>
+          <li>Fans Favourite</li>
+          <li>From Your WatchList</li>
+          <li>Most Popular</li>
         </ul>
       </div>
-      {loading ? <p className='loading'>Loading...</p> :
-       <MovieList movies = {movies} />
-      }
+      {loading ? (
+        <p className="loading">Loading...</p>
+      ) : (
+        <MovieList movies={movies} />
+      )}
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
