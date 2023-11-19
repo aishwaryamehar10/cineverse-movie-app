@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../utils/Navbar";
+import Navbar from "../../components/Navbar";
 import { Link } from "react-router-dom";
-import "../styles/About.css";
+import "./index.css";
 
 function About() {
   return (
@@ -10,13 +10,13 @@ function About() {
       <div className="about-content">
         <p className="about-heading">
           CineVerseIMDb is an online database of information related to films,
-          television series, podcasts, home vclassNameeos, vclassNameeo games, and streaming
-          content online including cast, production crew and personal
-          biographies, plot summaries, trivia, ratings, and fan and critical
-          reviews. IMDb began as a fan-operated movie database on the Usenet
-          group "rec.arts.movies" in 1990, and moved to the Web in 1993. Since
-          1998, it has been owned and operated by IMDb.com, Inc., a subsclassNameiary
-          of Amazon.
+          television series, podcasts, home vclassNameeos, vclassNameeo games,
+          and streaming content online including cast, production crew and
+          personal biographies, plot summaries, trivia, ratings, and fan and
+          critical reviews. IMDb began as a fan-operated movie database on the
+          Usenet group "rec.arts.movies" in 1990, and moved to the Web in 1993.
+          Since 1998, it has been owned and operated by IMDb.com, Inc., a
+          subsclassNameiary of Amazon.
         </p>
         <div className="about-box">
           <div className="about">

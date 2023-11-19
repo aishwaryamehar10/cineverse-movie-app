@@ -62,3 +62,44 @@
   margin-right: 5px;
   margin-top: 5px;
 }
+@media (max-width: 767px) {
+  .favorites-movie-card {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 20px;
+  }
+
+  .favorites-movie-poster {
+    height: 190px;
+  }
+
+  .favorites-movie-details {
+    padding: 12px;
+    margin-bottom: 5px;
+  }
+
+  .favorites-movie-details .favorites-movie-title {
+    font-size: 14px;
+    margin: 8px 0;
+  }
+
+  .favorites-movie-details .favorites-movie-year {
+    font-size: 12px;
+    margin: 4px 0;
+  }
+
+  .favorites-movie-icons {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .favorites-movie-icons .remove-icon,
+  .favorites-movie-icons .playing-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+}

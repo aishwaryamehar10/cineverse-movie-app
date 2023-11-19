@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import Navbar from "../utils/Navbar";
+import Navbar from "../../components/Navbar";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchMovies } from "../actions/movieAction";
-import MovieList from "../utils/MovieList";
-import "../styles/Home.css";
+import { fetchMovies } from "../../actions/movieAction";
+import MovieList from "../../components/MovieList";
+import "./index.css";
 
 function Home() {
   const dispatch = useDispatch();

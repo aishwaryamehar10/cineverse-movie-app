@@ -5,8 +5,8 @@
 }
 
 .dark-theme .homepage {
-  background-color: white;
-  color: black;
+  background-color: #333;
+  color: #fff;
 }
 
 .home-container {
@@ -50,4 +50,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
+}
+@media (max-width: 768px) {
+  .home-container li {
+    margin: 0 5px;
+  }
 }

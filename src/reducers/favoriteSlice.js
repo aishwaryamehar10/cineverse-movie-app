@@ -11,7 +11,7 @@ const favoriteSlice = createSlice({
     },
     removeFromFavorite: (state, action) => {
       state.movies = state.movies.filter(
-        (movie) => movie.id !== action.payload.id
+        (movie) => movie.imdbID !== action.payload.imdbID
       );
     },
   },

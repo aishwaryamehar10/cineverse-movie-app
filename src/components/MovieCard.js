@@ -1,22 +1,32 @@
 import React from "react";
 import "../styles/MovieCard.css";
 import { useDispatch, useSelector } from "react-redux";
-import { addToFavorite, removeFromFavorite } from "../reducers/favoriteSlice";
+import {
+  addMovieToFavorite,
+  removeMovieFromFavorite,
+} from "../actions/favoriteAction";
 
 function MovieCard({ movie }) {
   const dispatch = useDispatch();
   const favorites = useSelector((state) => state.favorites.movies);
 
-  const isFavorite = favorites.some((favorite) => favorite.id === movie.id);
+  const isFavorite = favorites.some(
+    (favorite) => favorite.imdbID === movie.imdbID
+  );
 
-  const addMovieToFavorite = () => {
-    dispatch(addToFavorite(movie));
-    console.log(addToFavorite);
-  };
+  const handleToggleFavorite = () => {
+    console.log("Movie ID:", movie.imdbID);
+    console.log("Favorites:", favorites);
 
-  const removeMovieFromFavorite = () => {
-    dispatch(removeFromFavorite(movie));
-    console.log(removeFromFavorite);
+    console.log("Movie object:", movie);
+
+    if (isFavorite) {
+      console.log("Removing from favorites");
+      dispatch(removeMovieFromFavorite(movie));
+    } else {
+      console.log("Adding to favorites");
+      dispatch(addMovieToFavorite(movie));
+    }
   };
 
   return (
@@ -29,12 +39,12 @@ function MovieCard({ movie }) {
       <div className="movie-card-icons">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          fill={isFavorite ? "red" : "none"}
+          fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
-          stroke="currentColor"
+          stroke={isFavorite ? "red" : "currentColor"}
           className="heart-icon"
-          onClick={isFavorite ? removeMovieFromFavorite : addMovieToFavorite}>
+          onClick={handleToggleFavorite}>
           <path
             strokeLinecap="round"
             strokeLinejoin="round"

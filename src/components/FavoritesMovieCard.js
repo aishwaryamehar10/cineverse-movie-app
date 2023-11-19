@@ -1,24 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/FavoritesMovieCard.css";
 import { useDispatch, useSelector } from "react-redux";
-import { addToFavorite, removeFromFavorite } from "../reducers/favoriteSlice";
+import { removeFromFavorite } from "../reducers/favoriteSlice";
 
 function FavoritesMovieCard({ movie }) {
   const dispatch = useDispatch();
   const favorites = useSelector((state) => state.favorites.movies);
 
-  const [isFavorite, setIsFavorite] = useState(
-    favorites.some((favorite) => favorite.id === movie.id)
+  const isFavorite = favorites.some(
+    (favorite) => favorite.imdbID === movie.imdbID
   );
 
   const toggleFavorite = () => {
     if (isFavorite) {
       dispatch(removeFromFavorite(movie));
-    } else {
-      dispatch(addToFavorite(movie));
     }
-
-    setIsFavorite(!isFavorite);
   };
 
   return (
