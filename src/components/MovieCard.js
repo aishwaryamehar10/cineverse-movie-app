@@ -16,16 +16,15 @@ function MovieCard({ movie }) {
   );
 
   const handleToggleFavorite = () => {
-    console.log("Movie ID:", movie.imdbID);
+    /*  console.log("Movie ID:", movie.imdbID);
     console.log("Favorites:", favorites);
-
-    console.log("Movie object:", movie);
+    console.log("Movie object:", movie); */
 
     if (isFavorite) {
-      console.log("Removing from favorites");
+      //console.log("Removing from favorites");
       dispatch(removeMovieFromFavorite(movie));
     } else {
-      console.log("Adding to favorites");
+      //console.log("Adding to favorites");
       dispatch(addMovieToFavorite(movie));
     }
   };
