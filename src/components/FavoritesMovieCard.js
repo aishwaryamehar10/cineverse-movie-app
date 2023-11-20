@@ -6,6 +6,7 @@ import { removeFromFavorite } from "../reducers/favoriteSlice";
 function FavoritesMovieCard({ movie }) {
   const dispatch = useDispatch();
   const favorites = useSelector((state) => state.favorites.movies);
+  const isDarkTheme = useSelector((state) => state.theme.isDarkTheme);
 
   const isFavorite = favorites.some(
     (favorite) => favorite.imdbID === movie.imdbID
@@ -18,7 +19,10 @@ function FavoritesMovieCard({ movie }) {
   };
 
   return (
-    <div className="favorites-movie-card">
+    <div
+      className={`favorites-movie-card ${
+        isDarkTheme ? "dark-theme" : "light-theme"
+      }`}>
       <img
         src={movie.Poster}
         alt={movie.Title}

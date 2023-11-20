@@ -47,6 +47,18 @@
   display: flex;
 }
 
+.light-theme .favorites-movie-icons {
+  color: black;
+}
+
+.light-theme .remove-icon:hover {
+  color: yellowgreen;
+}
+
+.light-theme .playing-icon:hover {
+  color: yellowgreen;
+}
+
 .favorites-movie-icons .remove-icon {
   width: 24px;
   height: 24px;

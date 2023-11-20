@@ -2,6 +2,19 @@
   background-color: black;
   font-family: Arial, sans-serif;
   padding: 20px;
+  height: 100vh;
+}
+
+.light-theme {
+  background-color: #f5f5f5;
+  color: #333;
+}
+.light-theme .favorites-title {
+  color: black;
+}
+
+.light-theme .favorites-title:hover {
+  color: yellowgreen;
 }
 
 .favorites-title {

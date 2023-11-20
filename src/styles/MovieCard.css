@@ -47,6 +47,22 @@
   right: 0;
 }
 
+.light-theme .movie-card-icons {
+  color: black;
+}
+
+.light-theme .movie-card-icons .heart-icon:hover {
+  color: yellowgreen;
+}
+
+.light-theme .movie-card-icons .bookmark-icon:hover {
+  color: yellowgreen;
+}
+
+.light-theme .movie-card-icons .play-icon:hover {
+  color: yellowgreen;
+}
+
 .movie-card-icons .heart-icon {
   width: 24px;
   height: 24px;

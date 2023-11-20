@@ -37,6 +37,10 @@
   color: yellow;
 }
 
+.light-theme .lists-items .movie-icon {
+  color: yellowgreen;
+}
+
 .lists-items li {
   margin-bottom: 0.5rem;
 }
@@ -69,6 +73,10 @@
   color: yellow;
 }
 
+.light-theme .about-down .lists-items-down .movie-icon {
+  color: yellowgreen;
+}
+
 .lists-items-down li {
   margin-bottom: 0.5rem;
 }
@@ -80,6 +88,27 @@
 
 .lists-items-down a:hover {
   color: yellow;
+}
+
+.light-theme {
+  background-color: white;
+  color: black;
+}
+
+.light-theme .lists-items a {
+  color: black;
+}
+
+.light-theme .lists-items a:hover {
+  color: yellowgreen;
+}
+
+.light-theme .lists-items-down a {
+  color: black;
+}
+
+.light-theme .lists-items-down a:hover {
+  color: yellowgreen;
 }
 
 @media (max-width: 768px) {

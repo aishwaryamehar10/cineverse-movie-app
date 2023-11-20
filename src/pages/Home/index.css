@@ -44,6 +44,11 @@
   font-size: 18px;
   color: yellow;
   margin: 20px;
+  text-align: center;
+}
+
+.light-theme .loading {
+  color: black;
 }
 
 .movie-list {
@@ -51,6 +56,16 @@
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
 }
+
+.light-theme {
+  background-color: white;
+  color: black;
+}
+
+.light-theme .home-container h2 {
+  color: black;
+}
+
 @media (max-width: 768px) {
   .home-container li {
     margin: 0 5px;

@@ -25,7 +25,7 @@ function Navbar() {
   };
 
   return (
-    <div className={`navbar ${isDarkTheme ? "dark-theme" : ""}`}>
+    <div className={`navbar ${isDarkTheme ? "dark-theme" : "light-theme"}`}>
       <nav className="nav-lists">
         <ul>
           <Link to="/home">

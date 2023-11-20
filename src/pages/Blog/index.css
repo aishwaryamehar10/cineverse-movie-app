@@ -36,6 +36,11 @@
   text-decoration: underline;
 }
 
+.light-theme {
+  background-color: white;
+  color: black;
+}
+
 @media (max-width: 768px) {
   .blog-card {
     width: 100%;

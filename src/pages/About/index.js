@@ -1,11 +1,13 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import "./index.css";
 
 function About() {
+  const isDarkTheme = useSelector((state) => state.theme.isDarkTheme);
   return (
-    <div className="aboutpage">
+    <div className={`aboutpage ${isDarkTheme ? "dark-theme" : "light-theme"}`}>
       <Navbar />
       <div className="about-content">
         <p className="about-heading">

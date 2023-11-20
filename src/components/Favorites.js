@@ -3,18 +3,16 @@ import { useSelector } from "react-redux";
 import FavoritesMovieCard from "./FavoritesMovieCard";
 import Navbar from "./Navbar";
 import "../styles/Favorites.css";
-//import { removeFromFavorite } from "../reducers/favoriteSlice";
 
 function Favorites() {
   const favorites = useSelector((state) => state.favorites.movies);
-  //const dispatch = useDispatch();
-
-  /* const removeFavorite = (movie) => {
-    dispatch(removeFromFavorite(movie));
-  };*/
+  const isDarkTheme = useSelector((state) => state.theme.isDarkTheme);
 
   return (
-    <div className="favorites-page">
+    <div
+      className={`favorites-page ${
+        isDarkTheme ? "dark-theme" : "light-theme"
+      }`}>
       <Navbar />
       <h2 className="favorites-title">My Favorites</h2>
       <div className="favorites-item">

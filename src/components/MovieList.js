@@ -9,11 +9,6 @@ function MovieList() {
   const error = useSelector((state) => state.movies.error);
   const searchTerm = useSelector((state) => state.search.searchTerm || "");
 
-  console.log("Movies:", movies);
-  console.log("Loading:", loading);
-  console.log("Error:", error);
-  console.log("Search Term:", searchTerm);
-
   if (loading) {
     return <p>Loading...</p>;
   }

@@ -9,6 +9,7 @@ import {
 function MovieCard({ movie }) {
   const dispatch = useDispatch();
   const favorites = useSelector((state) => state.favorites.movies);
+  const isDarkTheme = useSelector((state) => state.theme.isDarkTheme);
 
   const isFavorite = favorites.some(
     (favorite) => favorite.imdbID === movie.imdbID
@@ -30,7 +31,7 @@ function MovieCard({ movie }) {
   };
 
   return (
-    <div className="movie-card">
+    <div className={`movie-card ${isDarkTheme ? "dark-theme" : "light-theme"}`}>
       <img src={movie.Poster} alt={movie.Title} className="movie-poster" />
       <div className="movie-details">
         <h2 className="movie-title">{movie.Title}</h2>

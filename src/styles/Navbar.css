@@ -129,3 +129,51 @@
 .sun-icon:hover {
   color: yellow;
 }
+
+.light-theme {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.light-theme .moon-icon,
+.light-theme .sun-icon,
+.light-theme .home-icon,
+.light-theme .about-icon,
+.light-theme .book-icon,
+.light-theme .heart-icon,
+.light-theme .search-input,
+.light-theme .search-button,
+.light-theme .nav-icons a {
+  color: #000;
+}
+
+.light-theme .home-icon:hover {
+  color: yellowgreen;
+}
+.light-theme .about-icon:hover {
+  color: yellowgreen;
+}
+.light-theme .blog-icon:hover {
+  color: yellowgreen;
+}
+.light-theme .heart-icon:hover {
+  color: yellowgreen;
+}
+.light-theme .sun-icon:hover {
+  color: yellowgreen;
+}
+.light-theme .moon-icon:hover {
+  color: yellowgreen;
+}
+
+.light-theme .search-input {
+  border: 1px solid #000;
+}
+
+.moon-icon,
+.sun-icon {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  fill: #000;
+}

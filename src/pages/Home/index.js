@@ -15,10 +15,8 @@ function Home() {
     dispatch(fetchMovies(""));
   }, [dispatch]);
 
-  console.log(movies);
-
   return (
-    <div className={`homepage ${isDarkTheme ? "dark-theme" : ""}`}>
+    <div className={`homepage ${isDarkTheme ? "dark-theme" : "light-theme"}`}>
       <Navbar />
       <div className="home-container">
         <h2>What To Watch - CineVerse</h2>
