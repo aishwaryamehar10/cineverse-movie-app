@@ -1,14 +1,17 @@
+// App.js
+import React from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Hero from "./pages/Hero";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
-import { useSelector } from "react-redux";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Favorites from "./components/Favorites";
+import { useSelector } from "react-redux";
 
 function App() {
   const isAuthenticated = useSelector((state) => state.user.isAuthenticated);
+
   return (
     <BrowserRouter>
       <Routes>
@@ -16,23 +19,19 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route
           path="/home"
-          element={<Home />}
-          isAuthenticated={isAuthenticated}
+          element={isAuthenticated ? <Home /> : <Navigate to="/login" />}
         />
         <Route
           path="/about"
-          element={<About />}
-          isAuthenticated={isAuthenticated}
+          element={isAuthenticated ? <About /> : <Navigate to="/login" />}
         />
         <Route
           path="/blog"
-          element={<Blog />}
-          isAuthenticated={isAuthenticated}
+          element={isAuthenticated ? <Blog /> : <Navigate to="/login" />}
         />
         <Route
           path="/favorites"
-          element={<Favorites />}
-          isAuthenticated={isAuthenticated}
+          element={isAuthenticated ? <Favorites /> : <Navigate to="/login" />}
         />
       </Routes>
     </BrowserRouter>
