@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { updateSearchTerm } from "../reducers/searchSlice";
 import { fetchMovies } from "../actions/movieAction";
 import { toggleTheme } from "../reducers/themeSlice";
-
 import "../styles/Navbar.css";
 
 function Navbar() {
@@ -25,7 +24,7 @@ function Navbar() {
   };
 
   return (
-    <div className={`navbar ${isDarkTheme ? "dark-theme" : "light-theme"}`}>
+    <div className={`navbar ${isDarkTheme ? "dark-theme" : "light-theme"} `}>
       <nav className="nav-lists">
         <ul>
           <Link to="/home">
